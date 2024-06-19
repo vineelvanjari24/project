@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Transfer Portal - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <img src="logo.png" alt="Website Logo">
     <nav>
@@ -20,23 +22,23 @@
         <div class="login">
             <img src="./loginImage.jpg" alt="Login Image">
             <h3>Login</h3>
-            <input type="number" id="EmpID" placeholder="Employee ID"/>
+            <input type="number" id="EmpID" placeholder="Employee ID" />
             <button class="btn otp">SEND OTP</button>
             <input type="number" id="verifyotp" placeholder="OTP" />
             <button class="btn log" id="loginBtn">VERIFY & LOGIN</button>
-        </div>    
+        </div>
     </main>
     <script>
-        const logbtn=document.getElementById("loginBtn");
-        logbtn.addEventListener('click', function() {
-            let id=document.getElementById("EmpID");
-            let otp=document.getElementById("verifyotp");
+        const logbtn = document.getElementById("loginBtn");
+        logbtn.addEventListener('click', function () {
+            let id = document.getElementById("EmpID");
+            let otp = document.getElementById("verifyotp");
             console.log(id.value);
             console.log(otp.value)
-            if(id.value==2600410 && otp.value==123456){
-                window.open('http://127.0.0.1:5500/public/data.html', '_blank'); // '_blank' opens the link in a new tab
+            if (id.value == 2600410 && otp.value == 123456) {
+                window.open('data.html', '_self'); // '_blank' opens the link in a new tab
             }
-            else{
+            else {
                 alert("Enter Valid Details.");
             }
         });
@@ -47,4 +49,5 @@
         }
     </script>
 </body>
+
 </html>
